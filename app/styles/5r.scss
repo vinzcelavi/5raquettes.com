@@ -1,0 +1,164 @@
+$green: #B2C721;
+
+body {
+  font-family: 'Alegreya Sans', sans-serif;
+  line-height: 1.5;
+  color: #fff;
+  background: url(../images/bg-racket.jpg) no-repeat top center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { margin: 0 auto 10px; }
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 20px;
+  padding-left: 40px;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+
+  @media screen and (min-device-width: 48.000em) {
+    padding-top: 50px;
+    padding-left: 70px;
+    height: auto;
+  }
+}
+
+.logo {
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: darken($green, 5%);
+  text-decoration: none;
+  transition: all .15s;
+
+  & + .btn { margin-left: 20px; }
+
+  span,
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  svg {
+    margin-right: 4px;
+
+    path {
+      fill: #fff;
+    }
+  }
+
+  &:hover:not(.btn--white) {
+    background-color: $green;
+  }
+}
+
+.btn--white {
+  padding: 5px 10px;
+  background-color: transparent;
+  color: #fff;
+  opacity: .8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.header {
+  margin: 124px auto 0;
+  width: 940px;
+
+  h1 {
+    font-size: 80px;
+    line-height: 60px;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+  }
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  display: none;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      font-size: 20px;
+      line-height: 1.25;
+      font-weight: 500;
+      font-style: italic;
+      text-transform: uppercase;
+      color: $green;
+
+      &:nth-child(even) {
+        color: lighten($green, 25%);
+      }
+    }
+
+    // @media screen and (min-device-width: 48.000em) {
+    //   margin-bottom: 60px;
+    //
+    //   li {
+    //     font-size: 50px;
+    //     line-height: 1.2;
+    //   }
+    // }
+  }
+}
+
+.opening {
+  font-weight: 100;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #B0C800;
+
+  br { display: block; }
+
+  &:before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 70px;
+    margin-bottom: 20px;
+    background-color: #B0C800;
+  }
+
+  @media screen and (min-device-width: 48.000em) {
+    position: absolute;
+    left: 70px;
+    bottom: 20px;
+    width: 100%;
+
+    br { display: block; }
+  }
+}
