@@ -117,7 +117,7 @@ a {
 .header {
   margin: 0 auto;
   margin-top: 40px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   padding: 0 40px;
   text-align: center;
 
@@ -130,7 +130,7 @@ a {
   }
 
   h2 {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-size: 16px;
     line-height: 1.25;
     font-weight: 400;
@@ -149,7 +149,6 @@ a {
     }
 
     h2 {
-      margin-bottom: 40px;
       font-size: 22px;
     }
   }
@@ -180,12 +179,16 @@ a {
 
   li {
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.25;
     font-weight: 500;
     font-style: italic;
     text-transform: uppercase;
     color: $green;
+
+    @media screen and (min-device-width: 48.000em) {
+      font-size: 18px;
+    }
 
     &:nth-child(even) {
       color: lighten($green, 30%);
@@ -227,15 +230,28 @@ a {
   &:last-child { margin-bottom: 0; }
 
   .contact-label {
-    width: 140px;
+    width: 80px;
+    margin-right: 20px;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
   }
+
+  .contact-desc {
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  @media screen and (min-device-width: 48.000em) {
+    .contact-label {
+      width: 140px;
+      margin-right: 20px;
+    }
+  }
 }
 
 .work-in-progress {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   z-index: 120;
