@@ -1,5 +1,6 @@
 $white: #fff;
 $black: #000;
+$brown: #85765a;
 $green: #B2C721;
 
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -68,7 +69,7 @@ a {
   font-weight: 500;
   padding: 10px 20px;
   color: $white;
-  background-color: darken($green, 5%);
+  background-color: darken($brown, 5%);
   text-decoration: none;
   transition: all .15s;
 
@@ -87,6 +88,14 @@ a {
       fill: $white;
     }
   }
+
+  &:hover:not(.btn--white) {
+    background-color: $brown;
+  }
+}
+
+.btn--green {
+  background-color: darken($green, 5%);
 
   &:hover:not(.btn--white) {
     background-color: $green;
